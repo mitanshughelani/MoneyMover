@@ -1,9 +1,7 @@
 package moneymover;
 
-import java.util.*;
 import javax.swing.*;
 import java.awt.*;
-import com.toedter.calendar.JDateChooser;
 import java.awt.event.*;
         
         
@@ -223,7 +221,8 @@ public class SignupTwo extends JFrame implements ActionListener {
                 String query = "insert into signuptwo values('"+formno+"','"+religion+"', '"+category+"', '"+income+"', '"+qualification+"', '"+occupation+"', '"+pan+"', '"+aadhar+"', '"+seniorcitizen+"', '"+existingacc+"')"; 
                 c.s.executeUpdate(query);
                 
-                //signup 3
+                setVisible(false);
+                new SignupThree(formno);
             }  
             
             
