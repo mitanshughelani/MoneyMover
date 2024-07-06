@@ -187,19 +187,19 @@ public class SignupThree extends JFrame implements ActionListener{
             if(atm.isSelected()){
                 facility = facility + "ATM Card ";
             }
-            else if(internetB.isSelected()){
+            if(internetB.isSelected()){
                 facility = facility + "Internet Banking ";
             }
-            else if(mobileB.isSelected()){
+            if(mobileB.isSelected()){
                 facility = facility + "Mobile Banking ";
             }
-            else if(email.isSelected()){
+            if(email.isSelected()){
                 facility = facility + "Email and SMS Alerts ";
             }
-            else if(chequeB.isSelected()){
+            if(chequeB.isSelected()){
                 facility = facility + "Cheque Book ";
             }
-            else if(eStatement.isSelected()){
+            if(eStatement.isSelected()){
                 facility = facility + "E-Statement ";
             }
             
@@ -228,9 +228,9 @@ public class SignupThree extends JFrame implements ActionListener{
                 
                     JOptionPane.showMessageDialog(null, "Card Number: " + cardNumber + "\n Pin: " + pinNumber);
                     
-                }  
-                
-                
+                    setVisible(false);
+                    new Deposit(pinNumber).setVisible(true);
+                }       
             } catch(Exception e){
                 System.out.println(e);
             }
@@ -239,7 +239,8 @@ public class SignupThree extends JFrame implements ActionListener{
         }
        
         else if(ae.getSource() == cancel){
-            
+            setVisible(false);
+            new Login().setVisible(true);
         }
     }
     
