@@ -104,6 +104,7 @@ public class PinChange extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(null, "PIN Changed Successfully");
                 
                 setVisible(false);
+//                pinNumber = textPin;
                 new Transactions(textPin).setVisible(true);
                 
             }
